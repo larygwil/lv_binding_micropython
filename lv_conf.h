@@ -27,7 +27,7 @@
  *====================*/
 
 /** Color depth: 1 (I1), 8 (L8), 16 (RGB565), 24 (RGB888), 32 (XRGB8888) */
-#define LV_COLOR_DEPTH 16
+#define LV_COLOR_DEPTH 1
 
 /*=========================
    STDLIB WRAPPER SETTINGS
@@ -73,11 +73,11 @@
  *====================*/
 
 /** Default display refresh, input device read and animation step period. */
-#define LV_DEF_REFR_PERIOD  33      /**< [ms] */
+#define LV_DEF_REFR_PERIOD  60      /**< [ms] */
 
 /** Default Dots Per Inch. Used to initialize default sizes such as widgets sized, style paddings.
  * (Not so important, you can adjust it to modify default sizes and spaces.) */
-#define LV_DPI_DEF 130              /**< [px/inch] */
+#define LV_DPI_DEF 68              /**< [px/inch] */
 
 /*=================
  * OPERATING SYSTEM
@@ -151,11 +151,11 @@
      * - gradients use RGB888
      * - bitmaps with transparency may use ARGB8888
      */
-    #define LV_DRAW_SW_SUPPORT_RGB565       1
+    // #define LV_DRAW_SW_SUPPORT_RGB565       1
     /* #define LV_DRAW_SW_SUPPORT_RGB565A8     1 */
-    #define LV_DRAW_SW_SUPPORT_RGB888       1
+    // #define LV_DRAW_SW_SUPPORT_RGB888       1
     /* #define LV_DRAW_SW_SUPPORT_XRGB8888     1 */
-    #define LV_DRAW_SW_SUPPORT_ARGB8888     1
+    // #define LV_DRAW_SW_SUPPORT_ARGB8888     1
     /* #define LV_DRAW_SW_SUPPORT_ARGB8888_PREMULTIPLIED 1 */
     /* #define LV_DRAW_SW_SUPPORT_L8           1 */
     /* #define LV_DRAW_SW_SUPPORT_AL88         1 */
@@ -180,7 +180,7 @@
     /**
      * - 0: Use a simple renderer capable of drawing only simple rectangles with gradient, images, text, and straight lines only.
      * - 1: Use a complex renderer capable of drawing rounded corners, shadow, skew lines, and arcs too. */
-    #define LV_DRAW_SW_COMPLEX          1
+    #define LV_DRAW_SW_COMPLEX          0
 
     #if LV_DRAW_SW_COMPLEX == 1
         /** Allow buffering some shadow calculation.
@@ -587,15 +587,15 @@ extern void mp_lv_deinit_gc();
 
 /* Montserrat fonts with ASCII range and some symbols using bpp = 4
  * https://fonts.google.com/specimen/Montserrat */
-#define LV_FONT_MONTSERRAT_8  0
+#define LV_FONT_MONTSERRAT_8  1
 #define LV_FONT_MONTSERRAT_10 0
 #define LV_FONT_MONTSERRAT_12 0
-#define LV_FONT_MONTSERRAT_14 1
-#define LV_FONT_MONTSERRAT_16 1
+#define LV_FONT_MONTSERRAT_14 0
+#define LV_FONT_MONTSERRAT_16 0
 #define LV_FONT_MONTSERRAT_18 0
 #define LV_FONT_MONTSERRAT_20 0
 #define LV_FONT_MONTSERRAT_22 0
-#define LV_FONT_MONTSERRAT_24 1
+#define LV_FONT_MONTSERRAT_24 0
 #define LV_FONT_MONTSERRAT_26 0
 #define LV_FONT_MONTSERRAT_28 0
 #define LV_FONT_MONTSERRAT_30 0
@@ -636,7 +636,7 @@ extern void mp_lv_deinit_gc();
 #define LV_FONT_CUSTOM_DECLARE
 
 /** Always set a default font */
-#define LV_FONT_DEFAULT &lv_font_montserrat_14
+#define LV_FONT_DEFAULT &lv_font_montserrat_8
 
 /** Enable handling large font and/or fonts with a lot of characters.
  *  The limit depends on the font size, font face and bpp.
@@ -709,7 +709,7 @@ extern void mp_lv_deinit_gc();
  * */
 #define LV_WIDGETS_HAS_DEFAULT_VALUE  0
 
-#define LV_USE_ANIMIMG    1
+#define LV_USE_ANIMIMG    0
 
 #define LV_USE_ARC        1
 
@@ -721,7 +721,7 @@ extern void mp_lv_deinit_gc();
 
 #define LV_USE_BUTTONMATRIX  1
 
-#define LV_USE_CALENDAR   1
+#define LV_USE_CALENDAR   0
 #if LV_USE_CALENDAR
     #define LV_CALENDAR_WEEK_STARTS_MONDAY 0
     #if LV_CALENDAR_WEEK_STARTS_MONDAY
@@ -738,7 +738,7 @@ extern void mp_lv_deinit_gc();
 
 #define LV_USE_CANVAS     1
 
-#define LV_USE_CHART      1
+#define LV_USE_CHART      0
 
 #define LV_USE_CHECKBOX   1
 
@@ -748,7 +748,7 @@ extern void mp_lv_deinit_gc();
 
 #define LV_USE_IMAGEBUTTON     1
 
-#define LV_USE_KEYBOARD   1
+#define LV_USE_KEYBOARD   0
 
 #define LV_USE_LABEL      1
 #if LV_USE_LABEL
@@ -769,13 +769,13 @@ extern void mp_lv_deinit_gc();
 
 #define LV_USE_MSGBOX     1
 
-#define LV_USE_ROLLER     1   /**< Requires: lv_label */
+#define LV_USE_ROLLER     0   /**< Requires: lv_label */
 
 #define LV_USE_SCALE      1
 
 #define LV_USE_SLIDER     1   /**< Requires: lv_bar */
 
-#define LV_USE_SPAN       1
+#define LV_USE_SPAN       0
 #if LV_USE_SPAN
     /** A line of text can contain this maximum number of span descriptors. */
     #define LV_SPAN_SNIPPET_STACK_SIZE 64
@@ -808,7 +808,7 @@ extern void mp_lv_deinit_gc();
 /* Documentation for themes can be found here: https://docs.lvgl.io/master/details/common-widget-features/styles/style.html#themes . */
 
 /** A simple, impressive and very complete theme */
-#define LV_USE_THEME_DEFAULT 1
+#define LV_USE_THEME_DEFAULT 0
 #if LV_USE_THEME_DEFAULT
     /** 0: Light mode; 1: Dark mode */
     #define LV_THEME_DEFAULT_DARK 0
@@ -824,7 +824,7 @@ extern void mp_lv_deinit_gc();
 #define LV_USE_THEME_SIMPLE 0
 
 /** A theme designed for monochrome displays */
-#define LV_USE_THEME_MONO 0
+#define LV_USE_THEME_MONO 1
 
 /*==================
  * LAYOUTS
@@ -949,7 +949,7 @@ extern void mp_lv_deinit_gc();
 #define LV_USE_QRCODE 1
 
 /** Barcode code library */
-#define LV_USE_BARCODE 1
+#define LV_USE_BARCODE 0
 
 /*FreeType library*/
 #ifdef MICROPY_FREETYPE
