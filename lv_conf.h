@@ -434,7 +434,7 @@ extern void mp_lv_deinit_gc();
 #define LV_GC_INIT() mp_lv_init_gc()
 #define LV_GC_DEINIT() mp_lv_deinit_gc()
 
-#define LV_ENABLE_GLOBAL_CUSTOM 1
+#define LV_ENABLE_GLOBAL_CUSTOM 0
 #if LV_ENABLE_GLOBAL_CUSTOM
     extern void *mp_lv_roots;
     #define LV_GLOBAL_CUSTOM() ((lv_global_t*)mp_lv_roots)
