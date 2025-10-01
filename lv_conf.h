@@ -711,9 +711,9 @@ extern void mp_lv_deinit_gc();
 
 #define LV_USE_ANIMIMG    0
 
-#define LV_USE_ARC        1
+#define LV_USE_ARC        0
 
-#define LV_USE_ARCLABEL  1
+#define LV_USE_ARCLABEL  0
 
 #define LV_USE_BAR        1
 
@@ -736,7 +736,7 @@ extern void mp_lv_deinit_gc();
     #define LV_USE_CALENDAR_CHINESE 0
 #endif  /*LV_USE_CALENDAR*/
 
-#define LV_USE_CANVAS     1
+#define LV_USE_CANVAS     0
 
 #define LV_USE_CHART      0
 
@@ -744,15 +744,15 @@ extern void mp_lv_deinit_gc();
 
 #define LV_USE_DROPDOWN   1   /**< Requires: lv_label */
 
-#define LV_USE_IMAGE      1   /**< Requires: lv_label */
+#define LV_USE_IMAGE      1   /**< Requires: lv_label */ // msgbox需要image
 
-#define LV_USE_IMAGEBUTTON     1
+#define LV_USE_IMAGEBUTTON     0
 
 #define LV_USE_KEYBOARD   0
 
 #define LV_USE_LABEL      1
 #if LV_USE_LABEL
-    #define LV_LABEL_TEXT_SELECTION 1   /**< Enable selecting text of the label */
+    #define LV_LABEL_TEXT_SELECTION 0   /**< Enable selecting text of the label */
     #define LV_LABEL_LONG_TXT_HINT 1    /**< Store some extra info in labels to speed up drawing of very long text */
     #define LV_LABEL_WAIT_CHAR_COUNT 3  /**< The count of wait chart */
 #endif
@@ -771,7 +771,7 @@ extern void mp_lv_deinit_gc();
 
 #define LV_USE_ROLLER     0   /**< Requires: lv_label */
 
-#define LV_USE_SCALE      1
+#define LV_USE_SCALE      0
 
 #define LV_USE_SLIDER     1   /**< Requires: lv_bar */
 
@@ -781,24 +781,24 @@ extern void mp_lv_deinit_gc();
     #define LV_SPAN_SNIPPET_STACK_SIZE 64
 #endif
 
-#define LV_USE_SPINBOX    1
+#define LV_USE_SPINBOX    0
 
-#define LV_USE_SPINNER    1
+#define LV_USE_SPINNER    0
 
 #define LV_USE_SWITCH     1
 
-#define LV_USE_TABLE      1
+#define LV_USE_TABLE      0
 
-#define LV_USE_TABVIEW    1
+#define LV_USE_TABVIEW    0
 
-#define LV_USE_TEXTAREA   1   /**< Requires: lv_label */
+#define LV_USE_TEXTAREA   0   /**< Requires: lv_label */
 #if LV_USE_TEXTAREA != 0
     #define LV_TEXTAREA_DEF_PWD_SHOW_TIME 1500    /**< [ms] */
 #endif
 
-#define LV_USE_TILEVIEW   1
+#define LV_USE_TILEVIEW   0
 
-#define LV_USE_WIN        1
+#define LV_USE_WIN        0
 
 #define LV_USE_3DTEXTURE  0
 
@@ -882,7 +882,7 @@ extern void mp_lv_deinit_gc();
 #endif
 
 /** API for memory-mapped file access. */
-#define LV_USE_FS_MEMFS 1
+#define LV_USE_FS_MEMFS 0
 #if LV_USE_FS_MEMFS
     #define LV_FS_MEMFS_LETTER 'M'     /**< Set an upper-case driver-identifier letter for this driver (e.g. 'A'). */
 #endif
@@ -915,7 +915,7 @@ extern void mp_lv_deinit_gc();
 #endif
 
 /** LODEPNG decoder library */
-#define LV_USE_LODEPNG 1
+#define LV_USE_LODEPNG 0
 
 /** PNG decoder(libpng) library */
 #define LV_USE_LIBPNG 0
@@ -925,14 +925,14 @@ extern void mp_lv_deinit_gc();
 
 /** JPG + split JPG decoder library.
  *  Split JPG is a custom format optimized for embedded systems. */
-#define LV_USE_TJPGD 1
+#define LV_USE_TJPGD 0
 
 /** libjpeg-turbo decoder library.
  *  - Supports complete JPEG specifications and high-performance JPEG decoding. */
 #define LV_USE_LIBJPEG_TURBO 0
 
 /** GIF decoder library */
-#define LV_USE_GIF 1
+#define LV_USE_GIF 0
 #if LV_USE_GIF
     /** GIF decoder accelerate */
     #define LV_GIF_CACHE_DECODE_DATA 0
@@ -946,7 +946,7 @@ extern void mp_lv_deinit_gc();
 #define LV_USE_RLE 0
 
 /** QR code library */
-#define LV_USE_QRCODE 1
+#define LV_USE_QRCODE 0
 
 /** Barcode code library */
 #define LV_USE_BARCODE 0
@@ -1125,7 +1125,7 @@ extern void mp_lv_deinit_gc();
 #define LV_USE_FRAGMENT 0
 
 /** 1: Support using images as font in label or span widgets */
-#define LV_USE_IMGFONT 1
+#define LV_USE_IMGFONT 0
 
 /** 1: Enable an observer pattern implementation */
 #define LV_USE_OBSERVER 1
