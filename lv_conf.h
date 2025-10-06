@@ -340,7 +340,7 @@
  *-----------*/
 
 /*Enable the log module*/
-
+#define MICROPY_LV_USE_LOG 1
 #ifdef MICROPY_LV_USE_LOG
     #define LV_USE_LOG MICROPY_LV_USE_LOG
 #else
@@ -425,7 +425,7 @@
 
 /* PRIVATE API */
 
-#define LV_USE_PRIVATE_API 1
+#define LV_USE_PRIVATE_API 0
 
 /*Garbage Collector settings
  *Used if LVGL is bound to higher level language and the memory is managed by that language*/
@@ -769,36 +769,36 @@ extern void mp_lv_deinit_gc();
 
 #define LV_USE_MSGBOX     1
 
-#define LV_USE_ROLLER     0   /**< Requires: lv_label */
+#define LV_USE_ROLLER     1   /**< Requires: lv_label */
 
 #define LV_USE_SCALE      0
 
 #define LV_USE_SLIDER     1   /**< Requires: lv_bar */
 
-#define LV_USE_SPAN       0
+#define LV_USE_SPAN       1
 #if LV_USE_SPAN
     /** A line of text can contain this maximum number of span descriptors. */
     #define LV_SPAN_SNIPPET_STACK_SIZE 64
 #endif
 
-#define LV_USE_SPINBOX    0
+#define LV_USE_SPINBOX    1
 
 #define LV_USE_SPINNER    0
 
 #define LV_USE_SWITCH     1
 
-#define LV_USE_TABLE      0
+#define LV_USE_TABLE      1
 
-#define LV_USE_TABVIEW    0
+#define LV_USE_TABVIEW    1
 
-#define LV_USE_TEXTAREA   0   /**< Requires: lv_label */
+#define LV_USE_TEXTAREA   1   /**< Requires: lv_label */
 #if LV_USE_TEXTAREA != 0
     #define LV_TEXTAREA_DEF_PWD_SHOW_TIME 1500    /**< [ms] */
 #endif
 
-#define LV_USE_TILEVIEW   0
+#define LV_USE_TILEVIEW   1
 
-#define LV_USE_WIN        0
+#define LV_USE_WIN        1
 
 #define LV_USE_3DTEXTURE  0
 
