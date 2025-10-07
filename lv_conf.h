@@ -587,7 +587,7 @@ extern void mp_lv_deinit_gc();
 
 /* Montserrat fonts with ASCII range and some symbols using bpp = 4
  * https://fonts.google.com/specimen/Montserrat */
-#define LV_FONT_MONTSERRAT_8  1
+#define LV_FONT_MONTSERRAT_8  0
 #define LV_FONT_MONTSERRAT_10 0
 #define LV_FONT_MONTSERRAT_12 0
 #define LV_FONT_MONTSERRAT_14 0
@@ -621,8 +621,8 @@ extern void mp_lv_deinit_gc();
 /**< 1338 most common CJK radicals */
 
 /** Pixel perfect monospaced fonts */
-#define LV_FONT_UNSCII_8  0
-#define LV_FONT_UNSCII_16 0
+#define LV_FONT_UNSCII_8  1
+#define LV_FONT_UNSCII_16 1
 
 /** Optionally declare custom fonts here.
  *
@@ -636,7 +636,7 @@ extern void mp_lv_deinit_gc();
 #define LV_FONT_CUSTOM_DECLARE
 
 /** Always set a default font */
-#define LV_FONT_DEFAULT &lv_font_montserrat_8
+#define LV_FONT_DEFAULT &lv_font_unscii_8
 
 /** Enable handling large font and/or fonts with a lot of characters.
  *  The limit depends on the font size, font face and bpp.
@@ -821,7 +821,7 @@ extern void mp_lv_deinit_gc();
 #endif /*LV_USE_THEME_DEFAULT*/
 
 /** A very simple theme that is a good starting point for a custom theme */
-#define LV_USE_THEME_SIMPLE 0
+#define LV_USE_THEME_SIMPLE 1
 
 /** A theme designed for monochrome displays */
 #define LV_USE_THEME_MONO 1
