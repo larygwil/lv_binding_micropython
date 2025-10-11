@@ -425,7 +425,7 @@
 
 /* PRIVATE API */
 
-#define LV_USE_PRIVATE_API 0
+#define LV_USE_PRIVATE_API 1 // 必须启用，否则回调有问题
 
 /*Garbage Collector settings
  *Used if LVGL is bound to higher level language and the memory is managed by that language*/
