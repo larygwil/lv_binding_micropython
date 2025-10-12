@@ -709,11 +709,11 @@ extern void mp_lv_deinit_gc();
  * */
 #define LV_WIDGETS_HAS_DEFAULT_VALUE  1
 
-#define LV_USE_ANIMIMG    0 // 动图
+#define LV_USE_ANIMIMG    1 // 动图
 
-#define LV_USE_ARC        0 // 加载圆弧
+#define LV_USE_ARC        1 // 加载圆弧
 
-#define LV_USE_ARCLABEL  0
+#define LV_USE_ARCLABEL  1
 
 #define LV_USE_BAR        1
 
@@ -721,7 +721,7 @@ extern void mp_lv_deinit_gc();
 
 #define LV_USE_BUTTONMATRIX  1
 
-#define LV_USE_CALENDAR   0
+#define LV_USE_CALENDAR   1
 #if LV_USE_CALENDAR
     #define LV_CALENDAR_WEEK_STARTS_MONDAY 0
     #if LV_CALENDAR_WEEK_STARTS_MONDAY
@@ -733,12 +733,12 @@ extern void mp_lv_deinit_gc();
     #define LV_CALENDAR_DEFAULT_MONTH_NAMES {"January", "February", "March",  "April", "May",  "June", "July", "August", "September", "October", "November", "December"}
     #define LV_USE_CALENDAR_HEADER_ARROW 1
     #define LV_USE_CALENDAR_HEADER_DROPDOWN 1
-    #define LV_USE_CALENDAR_CHINESE 0
+    #define LV_USE_CALENDAR_CHINESE 1
 #endif  /*LV_USE_CALENDAR*/
 
-#define LV_USE_CANVAS     0
+#define LV_USE_CANVAS     1
 
-#define LV_USE_CHART      0
+#define LV_USE_CHART      1
 
 #define LV_USE_CHECKBOX   1
 
@@ -746,9 +746,9 @@ extern void mp_lv_deinit_gc();
 
 #define LV_USE_IMAGE      1   /**< Requires: lv_label */ // msgbox需要image
 
-#define LV_USE_IMAGEBUTTON     0
+#define LV_USE_IMAGEBUTTON     1
 
-#define LV_USE_KEYBOARD   0
+#define LV_USE_KEYBOARD   1
 
 #define LV_USE_LABEL      1
 #if LV_USE_LABEL
@@ -771,7 +771,7 @@ extern void mp_lv_deinit_gc();
 
 #define LV_USE_ROLLER     1 //滚动选择  /**< Requires: lv_label */
 
-#define LV_USE_SCALE      0 // 标尺
+#define LV_USE_SCALE      1 // 标尺
 
 #define LV_USE_SLIDER     1 // 左右滑动调大小  /**< Requires: lv_bar */
 
@@ -783,7 +783,7 @@ extern void mp_lv_deinit_gc();
 
 #define LV_USE_SPINBOX    1 // 数字上下调大小
 
-#define LV_USE_SPINNER    0  // 圆弧调整
+#define LV_USE_SPINNER    1  // 圆弧调整
 
 #define LV_USE_SWITCH     1
 
