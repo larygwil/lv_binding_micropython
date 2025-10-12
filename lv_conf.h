@@ -54,7 +54,7 @@
 
 #if LV_USE_STDLIB_MALLOC == LV_STDLIB_BUILTIN
     /** Size of memory available for `lv_malloc()` in bytes (>= 2kB) */
-    #define LV_MEM_SIZE (64 * 1024U)          /**< [bytes] */
+    #define LV_MEM_SIZE (128 * 1024U)          /**< [bytes] */
 
     /** Size of the memory expand for `lv_malloc()` in bytes */
     #define LV_MEM_POOL_EXPAND_SIZE 0
@@ -140,7 +140,7 @@
 /** Stack size of drawing thread.
  * NOTE: If FreeType or ThorVG is enabled, it is recommended to set it to 32KB or more.
  */
-/* #define LV_DRAW_THREAD_STACK_SIZE    (8 * 1024) */
+#define LV_DRAW_THREAD_STACK_SIZE    (8 * 1024)
 /**< [bytes]*/
 
 #define LV_USE_DRAW_SW 1
@@ -434,7 +434,7 @@ extern void mp_lv_deinit_gc();
 #define LV_GC_INIT() mp_lv_init_gc()
 #define LV_GC_DEINIT() mp_lv_deinit_gc()
 
-#define LV_ENABLE_GLOBAL_CUSTOM 0
+#define LV_ENABLE_GLOBAL_CUSTOM 1
 #if LV_ENABLE_GLOBAL_CUSTOM
     extern void *mp_lv_roots;
     #define LV_GLOBAL_CUSTOM() ((lv_global_t*)mp_lv_roots)
@@ -476,10 +476,10 @@ extern void mp_lv_deinit_gc();
 #define LV_OBJ_STYLE_CACHE      1
 
 /** Add `id` field to `lv_obj_t` */
-#define LV_USE_OBJ_ID           0
+#define LV_USE_OBJ_ID           1
 
 /**  Enable support widget names*/
-#define LV_USE_OBJ_NAME         0
+#define LV_USE_OBJ_NAME         1
 
 /** Automatically assign an ID when obj is created */
 #define LV_OBJ_ID_AUTO_ASSIGN   LV_USE_OBJ_ID
@@ -490,13 +490,13 @@ extern void mp_lv_deinit_gc();
 * - lv_obj_stringify_id:    Return string-ified identifier, e.g. "button3".
 * - lv_obj_free_id:         Does nothing, as there is no memory allocation for the ID.
 * When disabled these functions needs to be implemented by the user.*/
-#define LV_USE_OBJ_ID_BUILTIN   0
+#define LV_USE_OBJ_ID_BUILTIN   1
 
 /** Use obj property set/get API. */
-#define LV_USE_OBJ_PROPERTY 0
+#define LV_USE_OBJ_PROPERTY 1
 
 /** Enable property name support. */
-#define LV_USE_OBJ_PROPERTY_NAME 0
+#define LV_USE_OBJ_PROPERTY_NAME 1
 
 /* Use VG-Lite Simulator.
  * - Requires: LV_USE_THORVG_INTERNAL or LV_USE_THORVG_EXTERNAL */
@@ -1119,10 +1119,10 @@ extern void mp_lv_deinit_gc();
 #define LV_USE_MONKEY 0
 
 /** 1: Enable grid navigation */
-#define LV_USE_GRIDNAV 0
+#define LV_USE_GRIDNAV 1
 
 /** 1: Enable `lv_obj` fragment logic */
-#define LV_USE_FRAGMENT 0
+#define LV_USE_FRAGMENT 1
 
 /** 1: Support using images as font in label or span widgets */
 #define LV_USE_IMGFONT 0
